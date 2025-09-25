@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANYTING</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Sans-Serif;
+      background-image: url('abot.jpg');
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .tombol {
+      font-size: 45px;
+    }
+    
+    img {
+      box-shadow: 0 9px 18px rgba(0, 0, 0, 0.9);
+      margin-bottom: 1px;
+    }
+    
+    h3 {
+      font-size: 28px;
+      color: white;
+      margin-top: 0;
+      margin-bottom: 1px;
+    }
+    
+    p {
+      font-size: 22px;
+      color: white;
+      margin-top: 0;
+      margin-bottom: 1px;
+    }
+    
+    .play {
+      margin-top: 0;
+      color: white;
+      
+      background: grey;
+      font-size: 19px;
+      border-radius: 16px;
+      border: 0px solid black;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+      padding: 12px;
+      width: 95px;
+    }
+    
+    .pause {
+      margin-top: 0;
+      color: white;
+      margin-bottom: 1px;
+      background: grey;
+      font-size: 19px;
+      border-radius: 16px;
+      border: 0px solid black;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+      padding: 12px;
+       width: 95px;
+    }
+    
+    .play:hover {
+      background: white;
+      color: grey;
+    }
+    
+    .pause:hover {
+      background: white;
+      color: grey;
+    }
+    
+  </style>
+  <body>
+    <div class="tt">
+    <img src="1975.jpg" width="330px" height="330px">
+    </div>
+    <h3>About You</h3>
+    <p>The 1975</p>
+    <audio id="pley" loop="true">
+      <source src="about.mp3" type="audio/mpeg">
+    </audio>
+    <div class="tombol">
+    <button class="play" onclick="playMusic()"><b>Play</b></button> 
+    <button class="pause" onclick="pauseMusic()"><b>Pause</b></button>
+    </div>
+    <script>
+      const audio = document.getElementById('pley');
+      
+      function playMusic() {
+        audio.play();
+      }
+      
+      function pauseMusic() {
+        audio.pause();
+      }
+    </script>
+  </body>
+</html>
